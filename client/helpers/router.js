@@ -18,6 +18,10 @@ Meteor.Router.filters({
       return 'loading';
     else
       return 'accessDenied';
+  },
+  'clearErrors': function(page) {
+    clearErrors();
+    return page;
   }
 });
 Meteor.Router.filter('requireLogin',{only: 'postSubmit'});
