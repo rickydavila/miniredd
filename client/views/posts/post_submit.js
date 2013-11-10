@@ -12,7 +12,7 @@ Template.postSubmit.events({
       if(error)
         return alert(error.reason);
     });
-    Meteor.Router.to('postsList', id);
+    Meteor.Router.to('postsList');
     //setting id of post to the return db id value Posts.insert returns
   }
 });
