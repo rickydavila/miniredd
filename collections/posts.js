@@ -6,6 +6,7 @@ Posts.allow({
 Posts.deny({
   update: function(userId, post, fieldNames) {
     // may only edit the following two fields:
+    //Underscore function, returns true if user edits more than supposed to
     return (_.without(fieldNames, 'url', 'title').length > 0);
   }
 });
