@@ -11,8 +11,8 @@ Template.postSubmit.events({
     Meteor.call('post', post, function(error, id) {
       if(error)
         return alert(error.reason);
-      Meteor.Router.to('postList', id);
     });
+    Meteor.Router.to('postsList', id);
     //setting id of post to the return db id value Posts.insert returns
   }
 });
