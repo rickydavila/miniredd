@@ -5,5 +5,11 @@
       {{#each comments}}
         {{> comment}}
       {{/each}}
+    </ul>
+      {{#if currentUser}}
+        {{> commentSubmit}}
+      {{else}}
+        <p>Please log in to leave a comment.</p>
+      {{/if}}
   {{/with}}
 </template>
