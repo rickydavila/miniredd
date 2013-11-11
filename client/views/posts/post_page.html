@@ -1,5 +1,9 @@
 <template name="postPage">
   {{#with currentPost}}
     {{> postItem}}
+    <ul class="comments">
+      {{#each comments}}
+        {{> comment}}
+      {{/each}}
   {{/with}}
 </template>
