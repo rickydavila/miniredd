@@ -7,7 +7,6 @@ Template.header.helpers({
     var active = _.any(args, function(name) {
       return location.pathname === Meteor.Router[name + 'Path']();
     });
-    console.log(active && 'active');
     return active && 'active';
   }
 });
